@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <title>Sizo</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <img src="http://192.168.0.5/image/jpeg.cgi" id="sienna" class="img-thumbnail mx-auto d-block" alt="Sienna">
+      </div>
+      <div class="row">
+        <img src="http://192.168.0.6/image/jpeg.cgi" id="zoe" class="img-thumbnail mx-auto d-block" alt="Zoe">
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/esm/popper.min.js" integrity="sha256-g491Yv8nsEVSfQ6aonhVVFXoX5vF2uJQIU0hVNRg4JQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+    <script>
+      const sienna = document.getElementById("sienna");
+      const zoe = document.getElementById("zoe");
+
+      setInterval(() => {
+        sienna.src = "http://192.168.0.5/image/jpeg.cgi?" + new Date().getTime();
+        zoe.src = "http://192.168.0.6/image/jpeg.cgi?" + new Date().getTime();
+      }, 1000);
+    </script>
+  </body>
+</html>
